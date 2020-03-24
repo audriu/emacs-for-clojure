@@ -5,15 +5,13 @@
 ;; Define package repositories
 (require 'package)
 (add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-
-(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
-(add-to-list 'package-pinned-packages '(magit . "melpa-stable") t)
-
+(add-to-list 'package-archives
+	     '("gnu" . "http://elpa.gnu.org/packages/") t)
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -71,6 +69,8 @@
 
     ;; edit html tags like sexps
     tagedit
+
+    neotree
 
     ;; git integration
     magit))

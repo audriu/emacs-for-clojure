@@ -5,7 +5,13 @@
 ;; preferences
 
 ;; Turn off the menu bar at the top of each frame because it's distracting
-(menu-bar-mode -1)
+;(menu-bar-mode -1)
+(tool-bar-mode -1)
+
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq inhibit-startup-screen t)
+(setq visible-bell t)
 
 ;; Show line numbers
 (global-linum-mode)
@@ -26,10 +32,10 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'tomorrow-night-bright t)
+(load-theme 'cyberpunk t)
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 120)
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height

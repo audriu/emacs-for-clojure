@@ -1,5 +1,6 @@
 .smex-items
 *~$
+*~
 places
 .recentf
 ido.last
@@ -9,5 +10,6 @@ projectile.cache
 auto-save-list
 backups
 melpa-stable
+elpa/
 archive-contents
 *.elc
