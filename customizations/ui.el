@@ -8,13 +8,14 @@
 ;(menu-bar-mode -1)
 (tool-bar-mode -1)
 
+(setq neo-autorefresh nil)
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 (setq inhibit-startup-screen t)
-(setq visible-bell t)
 
 ;; Show line numbers
 (global-linum-mode)
+(column-number-mode t)
 
 ;; You can uncomment this to remove the graphical toolbar at the top. After
 ;; awhile, you won't need the toolbar.
@@ -35,7 +36,7 @@
 (load-theme 'cyberpunk t)
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'default nil :height 110)
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
@@ -72,4 +73,4 @@
 (global-set-key (kbd "s-t") '(lambda () (interactive)))
 
 ;; no bell
-(setq ring-bell-function 'ignore)
+;(setq ring-bell-function 'ignore)
